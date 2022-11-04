@@ -59,10 +59,23 @@ sortBy.addEventListener("change", () => {
 // --------------------------
 //#region Adding Books
 // --------------------------
-const addInput = document.querySelector("nav input");
+const addTitle = document.querySelector("#title");
+const addAuthor = document.querySelector("#author")
+const addLanguage = document.querySelector("#language")
+const addSubjects = document.querySelector("#subjects")
 const addBtn = document.querySelector(".addBtn")
 
 addBtn.addEventListener("click", () => {
-  bookshelf.addBook();
+  const query = new Book(
+    [addAuthor.value],
+    addLanguage.value,
+    [addSubjects.value],
+    addTitle.value,
+  )
+ 
+  bookshelf.addBook(query);
+  bookshelf.render();
 })
+
+//#endregion Adding Books
 

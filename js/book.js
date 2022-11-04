@@ -18,6 +18,7 @@ function Book(authors, language, subject, title) {
   this.render = function () {
     /* NOTE: Change render! This is currently a barebones template. */
     const li = document.createElement("li");
+    li.setAttribute("id", "booksli")
     
     const liContent = document.createElement('ul');
     

@@ -38,7 +38,9 @@ function Bookshelf(htmlElement, books = []) {
    * @param {Book} book
    */
   this.addBook = function (book) {
+    // console.log(book)
     this.books.push(book);
+    // console.log(books)
   };
 
   /**
