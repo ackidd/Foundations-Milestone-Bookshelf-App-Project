@@ -55,3 +55,14 @@ sortBy.addEventListener("change", () => {
 });
 
 //#endregion Sorting
+
+// --------------------------
+//#region Adding Books
+// --------------------------
+const addInput = document.querySelector("nav input");
+const addBtn = document.querySelector(".addBtn")
+
+addBtn.addEventListener("click", () => {
+  bookshelf.addBook();
+})
+

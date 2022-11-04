@@ -1,4 +1,26 @@
+* {
+  background-color: #78290f;
+}
+
 nav {
   display: flex;
   gap: 2rem;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+li {
+  border: 5px solid #15616d;
+  list-style: none;
+  margin-right: 25%;
+  color: rgb(217, 220, 225);
+}
+
+button {
+  background-color: rgb(242, 231, 231);
 }

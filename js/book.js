@@ -18,7 +18,20 @@ function Book(authors, language, subject, title) {
   this.render = function () {
     /* NOTE: Change render! This is currently a barebones template. */
     const li = document.createElement("li");
-    li.textContent = this.title;
+    
+    const liContent = document.createElement('ul');
+    
+    const bookTitle = document.createElement('li');
+    bookTitle.textContent = `Title: ${this.title}`;
+
+    const bookAuth = document.createElement('li');
+    bookAuth.textContent = `Author(s): ${this.authors}`;
+
+    const bookLang = document.createElement('li');
+    bookLang.textContent = `Language: ${this.language}`;
+
+    const bookSubj = document.createElement('li');
+    bookSubj.textContent = `Subjects: ${subject}`
 
     // Create favorite button
     const favButton = document.createElement("button");
@@ -30,6 +43,9 @@ function Book(authors, language, subject, title) {
       this.isFavorite = !this.isFavorite;
       favButton.textContent = this.isFavorite ? "❤️" : "♡";
     });
+
+    liContent.append(bookTitle, bookAuth, bookLang, bookSubj);
+    li.append(liContent);
 
     return li;
   };
