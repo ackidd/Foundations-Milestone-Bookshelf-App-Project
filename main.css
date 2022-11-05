@@ -11,17 +11,6 @@ header {
 
 }
 
-/* header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px;
-  position: fixed;
-  overflow: hidden;
-  background-color: green;
-  width: 100%;
-} */
-
 #navBar-List {
   list-style-type: none;
   margin: 0;
@@ -70,4 +59,29 @@ nav {
 
 button {
   background-color: rgb(242, 231, 231);
+}
+
+#comments {
+  border: 2px solid rgb(64, 64, 228);
+}
+
+.header {
+  color: antiquewhite;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.description {
+  color: aquamarine;
+}
+
+#search-box {
+  background-color: antiquewhite;
+}
+
+.sortBy {
+  background-color: antiquewhite;
+}
+
+.field {
+  background-color: antiquewhite;
 }

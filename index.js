@@ -79,13 +79,5 @@ addBtn.addEventListener("click", () => {
 
 //#endregion Adding Books
 
-// --------------------------
-//#region Adding Comments
-// --------------------------
-// const favCount = document.querySelector(".favCount");
-// const updateBtn = document.querySelector(".favUpdateBtn");
 
-// updateBtn.addEventListener("click", () => {
-//   favCount.textContent = bookshelf.countFavoriteBooks();
-// });
 
