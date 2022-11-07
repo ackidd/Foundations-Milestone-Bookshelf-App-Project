@@ -5,13 +5,14 @@
  * @param {string[]} subject  array of book topics
  * @param {string} title title of the book
  */
-function Book(authors, language, subject, title, comment) {
+function Book(authors, language, subject, title) {
   this.authors = authors;
   this.language = language;
   this.subject = subject;
   this.title = title;
   this.isFavorite = false;
-  this.comment = false;
+  this.comment = '';
+  // this.numPages = 
 
   /**
    * @returns a list item representing this Book
@@ -32,7 +33,11 @@ function Book(authors, language, subject, title, comment) {
     bookLang.textContent = `Language: ${this.language}`;
 
     const bookSubj = document.createElement("li");
-    bookSubj.textContent = `Subjects: ${subject}`;
+    bookSubj.textContent = `Subjects: ${this.subject}`;
+
+    const bookComment = document.createElement("li");
+    bookComment.textContent = `Comment(s): ${this.comment}`;
+    bookComment.setAttribute("id", "bookComment");
 
     // Create favorite button
     const favButton = document.createElement("button");
@@ -54,24 +59,34 @@ function Book(authors, language, subject, title, comment) {
     const sendButton = document.createElement("button");
     sendButton.textContent = "Send";
     const commBox = document.createElement("input");
+    commBox.placeholder = "Type comment";
     commBox.setAttribute("maxLength", "280");
+    
+    // console.log(this.comment)
 
     // Open comment box on click
     commButton.addEventListener("click", () => {
       li.append(commBox, sendButton);
     });
 
+    // Didn't do what was wanted. This create one comment element 
+    // and then appends to that same one every time.
     // Create comment element
-    const commElement = document.createElement("p");
-    commElement.setAttribute("id", "comments")
-    li.append(commElement);
+    // const commElement = document.createElement("p");
+    // commElement.setAttribute("id", "comments");
+    // li.append(commElement);
+
 
     // Add comment when send button clicked
     sendButton.addEventListener("click", () => {
-      commElement.append(commBox.value);
+      const commElement = document.createElement("p");
+      commElement.setAttribute("id", "comments");
+      this.comment = commBox.value;
+      commElement.append(this.comment);
+      li.append(commElement);
     });
 
-    liContent.append(bookTitle, bookAuth, bookLang, bookSubj);
+    liContent.append(bookTitle, bookAuth, bookLang, bookSubj, bookComment);
     li.append(liContent);
 
     return li;

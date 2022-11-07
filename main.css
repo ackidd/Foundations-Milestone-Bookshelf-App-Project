@@ -2,8 +2,6 @@
   background-color: #78290f;
 }
 
-
-
 header {
   display: flex;
   justify-content: space-between;
@@ -15,9 +13,7 @@ header {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  /* overflow: hidden; */
   float: right;
-  /* position: fixed; */
   top: 0;
   left: 0;
   width: 100%;
@@ -29,7 +25,7 @@ li a {
   display: block;
   color: white;
   text-align: center;
-  /* padding: 14px 16px; */
+
   text-decoration: none;
 }
 
@@ -43,18 +39,13 @@ nav {
   gap: 2rem;
 }
 
-#app {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-
 #booksli {
   border: 5px solid #15616d;
   list-style: none;
   margin-right: 25%;
-  color: rgb(217, 220, 225);
+  color: rgb(125, 164, 225);
+  padding-bottom: 20px;
+  
 }
 
 button {
@@ -62,7 +53,9 @@ button {
 }
 
 #comments {
-  border: 2px solid rgb(64, 64, 228);
+  color: whitesmoke;
+  border: 2px solid rgb(64, 228, 214);
+  background-color: rgb(71, 78, 4);
 }
 
 .header {
@@ -70,6 +63,7 @@ button {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Style fields on the page */
 .description {
   color: aquamarine;
 }
@@ -84,4 +78,15 @@ button {
 
 .field {
   background-color: antiquewhite;
+}
+
+input {
+  background-color: antiquewhite;
+}
+
+/* Style comments */
+#bookComment {
+  color: rgb(209, 201, 41);
+  list-style: none;
+  padding-top: 5px;
 }

@@ -29,7 +29,9 @@ const searchBtn = document.querySelector(".searchBtn");
 // NOTE: This only searches through the titles of the books!
 searchBtn.addEventListener("click", () => {
   const query = searchInput.value.toLowerCase();
-  const searchFn = (b) => b.title.toLowerCase().includes(query);
+  modQuery = query.replace(/the/g, "");
+  // console.log(modQuery);
+  const searchFn = (b) => b.title.toLowerCase().includes(modQuery);
   bookshelf.filterVisibleBooks(searchFn);
 });
 

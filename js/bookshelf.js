@@ -48,7 +48,6 @@ function Bookshelf(htmlElement, books = []) {
    * existing DOM element for this Bookshelf.
    */
   this.render = function () {
-    /* NOTE: Change render! This is currently a barebones template. */
     const ul = document.createElement("ul");
     const books = this.visibleBooks.map((b) => b.render());
     ul.replaceChildren(...books);
