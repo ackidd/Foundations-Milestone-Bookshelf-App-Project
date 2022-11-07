@@ -2,8 +2,4 @@
 
 ## Overview
 
-This time around, you've been assigned to build out an entire web app: Bookshelf helps users keep track of all the books they've read and all the books they might want to read.
-
-This assessment will test your ability to design classes that show a solid understanding of OOP best practices and build a small project given high level descriptions.
-
-Refer to Canvas for more information as well as the rubric.
+Hi! This is my nifty Bookshelf web app! It displays a list of books from a large book data file. You can search, sort, favorite, add books, add comments, and see which books are novels and which are short stories. Hope you like it!.
