@@ -12,7 +12,8 @@ function Book(authors, language, subject, title) {
   this.title = title;
   this.isFavorite = false;
   this.comment = '';
-  // this.numPages = 
+  this.numPages = Math.floor(Math.random() * 1000);
+  this.category = this.numPages > 100;
 
   /**
    * @returns a list item representing this Book
@@ -35,9 +36,17 @@ function Book(authors, language, subject, title) {
     const bookSubj = document.createElement("li");
     bookSubj.textContent = `Subjects: ${this.subject}`;
 
+    const bookPages = document.createElement("li");
+    bookPages.textContent = `Pages: ${this.numPages}`;
+
+    const bookCategory = document.createElement("li");
+    bookCategory.textContent = `Category: ${this.category ? "Novel" : "Short story"}`
+
     const bookComment = document.createElement("li");
     bookComment.textContent = `Comment(s): ${this.comment}`;
     bookComment.setAttribute("id", "bookComment");
+
+    
 
     // Create favorite button
     const favButton = document.createElement("button");
@@ -86,7 +95,8 @@ function Book(authors, language, subject, title) {
       li.append(commElement);
     });
 
-    liContent.append(bookTitle, bookAuth, bookLang, bookSubj, bookComment);
+    liContent.append(bookTitle, bookAuth, bookLang, bookSubj, 
+      bookPages, bookCategory, bookComment);
     li.append(liContent);
 
     return li;
